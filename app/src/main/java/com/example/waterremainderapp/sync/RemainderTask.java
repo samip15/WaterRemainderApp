@@ -26,5 +26,7 @@ public class RemainderTask {
     }
     private static void issueChargingRemainder(Context context){
         PreferencesUtilities.incrementChargingRemainderCount(context);
+        NotificationUtils.remindUserWhileCharging(context);
     }
+
 }

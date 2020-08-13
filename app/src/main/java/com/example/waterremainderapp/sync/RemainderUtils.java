@@ -19,7 +19,7 @@ public class RemainderUtils {
 
     // charging state or not
     // 15 mins update or notify
-    private static final int REMAINDER_INTERVAL_MINUTES = 1;
+    private static final int REMAINDER_INTERVAL_MINUTES = 60;
     private static final int REMAINDER_INTERVAL_SECONDS = (int) TimeUnit.MINUTES.toSeconds(REMAINDER_INTERVAL_MINUTES);
     private static final int SYNC_TIME_SECONDS = REMAINDER_INTERVAL_SECONDS;
     // tag
@@ -49,8 +49,8 @@ public class RemainderUtils {
                 // our job should run at 1 minute interval for now
                 .setTrigger(
                         Trigger.executionWindow(
-                                REMAINDER_INTERVAL_MINUTES,
-                                REMAINDER_INTERVAL_MINUTES + SYNC_TIME_SECONDS))
+                                REMAINDER_INTERVAL_SECONDS,
+                                REMAINDER_INTERVAL_SECONDS + SYNC_TIME_SECONDS))
                 // replace old job with new one
                 .setReplaceCurrent(true)
                 .build();

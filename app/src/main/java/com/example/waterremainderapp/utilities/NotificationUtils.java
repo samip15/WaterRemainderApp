@@ -53,7 +53,7 @@ public class NotificationUtils {
         }
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context, WATER_REMAINDER_CHANNEL_ID)
                 .setColor(ContextCompat.getColor(context, R.color.colorPrimaryDark))
-                .setSmallIcon(R.drawable.drink_noticication)
+                .setSmallIcon(R.drawable.ic_baseline_local_drink_24)
                 .setLargeIcon(largeIcon(context))
                 .setContentTitle(context.getString(R.string.noti_text))
                 .setContentText(context.getString(R.string.noti_content_text))
@@ -80,7 +80,7 @@ public class NotificationUtils {
 
     private static Bitmap largeIcon(Context context) {
         Resources res = context.getResources();
-        Bitmap largeIcon = BitmapFactory.decodeResource(res, R.drawable.drink_noticication);
+        Bitmap largeIcon = BitmapFactory.decodeResource(res, R.drawable.ic_baseline_local_drink_24);
         return largeIcon;
     }
 
@@ -98,13 +98,13 @@ public class NotificationUtils {
                 incrementWaterCount,
                 PendingIntent.FLAG_CANCEL_CURRENT);
         // create action
-        NotificationCompat.Action drinkWaterAction = new NotificationCompat.Action(R.drawable.drink_noticication,
+        NotificationCompat.Action drinkWaterAction = new NotificationCompat.Action(R.drawable.ic_baseline_local_drink_24,
                 "I did it!!",
                 increamentPendingIntent);
         return drinkWaterAction;
     }
 
-    // =========================Notification Actions==============
+    // =========================Notification Actions=====================================
 
     /**
      * ignore notification action and clear notification

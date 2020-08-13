@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 public class WaterRemainderIntentService extends IntentService {
     // default constructor
     public WaterRemainderIntentService() {
-        super("waterRemainderIntentService");
+        super("WaterRemainderIntentService");
     }
 
     @Override
